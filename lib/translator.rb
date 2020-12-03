@@ -9,6 +9,7 @@ emote_list = {}
 emoticons = YAML.load_file(file_path)
 
   emoticons.each do |k,v|
+<<<<<<< HEAD
   
   emote_list[k] = {} 
   emote_list[k][:english] = v[0]
@@ -16,10 +17,20 @@ emoticons = YAML.load_file(file_path)
   end
   
 emote_list
+=======
+  faces = [v].to_h 
+  emote_list[k] = faces
+  
+   
+  end
+emote_list
+#binding.pry
+>>>>>>> 86dd534974a6f382a67c59407f232fa943c51cb4
 end
 
 
 
+<<<<<<< HEAD
 def get_english_meaning(path, emote)
   emote_hash = load_library(path)
  ee = emote_hash.keys.find do |k|
@@ -57,3 +68,10 @@ end
 
 
 
+=======
+#def get_english_meaning(path, emote)
+#end 
+
+#def get_japanese_emoticon(path, emote)
+#end 
+>>>>>>> 86dd534974a6f382a67c59407f232fa943c51cb4
